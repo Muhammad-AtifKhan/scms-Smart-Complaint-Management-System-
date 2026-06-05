@@ -1,11 +1,3 @@
-Perfect — main tumhe **professional, ATS-friendly, recruiter-impressing README.md** de raha hoon 🔥
-👉 Isay tum **direct copy-paste** karke GitHub pe use kar sakte ho.
-
----
-
-# 📄 ✅ COMPLETE README.md
-
-````markdown
 # 🚀 Smart Complaint Management System (SCMS)
 
 A full-stack **Complaint Management System** designed to handle citizen complaints efficiently with a strong focus on **PostgreSQL database design, SQL optimization, and backend architecture**.
@@ -251,8 +243,8 @@ npm start
 
 **Muhammad Atif Khan**
 
-* GitHub: [https://github.com/your-username](https://github.com/your-username)
-* LinkedIn: [https://linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
+* GitHub: [https://github.com/Muhammad-AtifKhan](https://github.com/Muhammad-AtifKhan)
+* LinkedIn: [www.linkedin.com/in/muhammad-atif-khan-a566a2358](www.linkedin.com/in/muhammad-atif-khan-a566a2358)
 
 ---
 
@@ -262,24 +254,3 @@ This project is built not just as an application, but as a **demonstration of st
 
 If you're reviewing this project, focus on the **database layer** — that's where the real engineering depth lies 🔥
 
-```
-
----
-
-# 🔥 NEXT STEP (IMPORTANT)
-
-👉 Isay use karne ke baad:
-
-1. GitHub pe paste karo  
-2. Apna username replace karo  
-3. ERD image add karo  
-
----
-
-Agar tum chaho to next main tumhare liye bana sakta hoon:
-
-👉 **:contentReference[oaicite:0]{index=0}**  
-👉 ya **:contentReference[oaicite:1]{index=1}**  
-
-Bolo 👍
-```
