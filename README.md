@@ -1,4 +1,3 @@
-```markdown
 # 🏛️ SCMS - Smart Complaint Management System
 
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
@@ -29,34 +28,6 @@ A **production-ready complaint management system** that bridges the gap between 
 - ✅ **Partial Unique Index** for active assignments only
 - ✅ **Complete Audit Trail** tracking every change
 
-## 🏗️ System Architecture
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                         CLIENTS                              │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐                  │
-│  │ Citizen  │  │ Officer  │  │  Admin   │                  │
-│  └────┬─────┘  └────┬─────┘  └────┬─────┘                  │
-│       └─────────────┼─────────────┘                         │
-│                     ▼                                       │
-│            ┌─────────────────┐                             │
-│            │   FastAPI       │                             │
-│            │   Backend       │                             │
-│            │  (REST APIs)    │                             │
-│            └────┬──────┬─────┘                             │
-│                 │      │                                    │
-│         ┌───────▼──────▼───────┐      ┌─────────────────┐  │
-│         │    PostgreSQL        │      │  File Storage   │  │
-│         │    Database          │      └─────────────────┘  │
-│         └──────────────────────┘                           │
-└─────────────────────────────────────────────────────────────┘
-```
-
-### Complaint Lifecycle
-```
-Submit → Pending → Assigned → In Progress → Resolved/Rejected
-```
-
 ## 🚀 Tech Stack
 
 **Backend:** FastAPI, PostgreSQL, SQLAlchemy, JWT, Bcrypt, Uvicorn
@@ -64,36 +35,35 @@ Submit → Pending → Assigned → In Progress → Resolved/Rejected
 **Frontend:** React 18, Vite, TailwindCSS, Axios, React Router, Context API
 
 ## 📁 Project Structure
-
-```
 scms-Smart-Complaint-Management-System/
 │
-├── database/               # All SQL files
-│   ├── schema.sql         # 10+ tables definition
-│   ├── indexes.sql        # 15+ performance indexes
-│   ├── views.sql          # 8+ analytics views
-│   ├── functions.sql      # Business logic functions
-│   ├── triggers.sql       # 6+ automation triggers
-│   └── seed.sql           # Sample data
+├── database/ # All SQL files
+│ ├── schema.sql # 10+ tables definition
+│ ├── indexes.sql # 15+ performance indexes
+│ ├── views.sql # 8+ analytics views
+│ ├── functions.sql # Business logic functions
+│ ├── triggers.sql # 6+ automation triggers
+│ └── seed.sql # Sample data
 │
-├── backend/               # FastAPI Backend
-│   ├── app/
-│   │   ├── routers/      # API endpoints (auth, complaints, admin)
-│   │   ├── services/     # Business logic
-│   │   ├── auth/         # JWT & security
-│   │   └── models/       # Pydantic schemas
-│   └── requirements.txt
+├── backend/ # FastAPI Backend
+│ ├── app/
+│ │ ├── routers/ # API endpoints (auth, complaints, admin)
+│ │ ├── services/ # Business logic
+│ │ ├── auth/ # JWT & security
+│ │ └── models/ # Pydantic schemas
+│ └── requirements.txt
 │
-├── frontend/              # React Frontend
-│   ├── src/
-│   │   ├── components/   # Role-based (admin, citizen, officer)
-│   │   ├── contexts/     # AuthContext
-│   │   ├── layouts/      # Sidebar, MainLayout
-│   │   └── utils/        # Helper functions
-│   └── package.json
+├── frontend/ # React Frontend
+│ ├── src/
+│ │ ├── components/ # Role-based (admin, citizen, officer)
+│ │ ├── contexts/ # AuthContext
+│ │ ├── layouts/ # Sidebar, MainLayout
+│ │ └── utils/ # Helper functions
+│ └── package.json
 │
-└── docs/                  # Documentation
-```
+└── docs/ # Documentation
+
+text
 
 ## 🚀 Quick Start
 
@@ -130,18 +100,13 @@ uvicorn app.main:app --reload --port 8000
 cd frontend
 npm install
 npm run dev
-```
-
-### Default Login Credentials
-| Role | Email | Password |
-|------|-------|----------|
-| Super Admin | admin@example.com | admin123 |
-| Citizen | john@example.com | citizen123 |
-| Officer | sarah@example.com | officer123 |
-
-## 📊 Sample SQL Queries
-
-```sql
+Default Login Credentials
+Role	Email	Password
+Super Admin	admin@example.com	admin123
+Citizen	john@example.com	citizen123
+Officer	sarah@example.com	officer123
+📊 Sample SQL Queries
+sql
 -- Complaint summary by department
 SELECT * FROM complaint_summary;
 
@@ -153,42 +118,43 @@ SELECT * FROM complaints_with_officers WHERE status != 'Resolved';
 
 -- User notifications
 SELECT * FROM user_notifications WHERE user_id = 2;
-```
+🔐 Security Features
+✅ JWT authentication with refresh tokens
 
-## 🔐 Security Features
-- ✅ JWT authentication with refresh tokens
-- ✅ Password hashing (bcrypt)
-- ✅ Role-based access control (RBAC)
-- ✅ SQL injection prevention
-- ✅ Input validation (Pydantic)
-- ✅ CORS protection
-- ✅ Rate limiting
+✅ Password hashing (bcrypt)
 
-## 📈 Future Enhancements
-- [ ] Mobile app (React Native)
-- [ ] Real-time WebSocket notifications
-- [ ] AI-based complaint categorization
-- [ ] Docker containerization
-- [ ] CI/CD pipeline (GitHub Actions)
-- [ ] Analytics dashboard with charts
+✅ Role-based access control (RBAC)
 
-## 👨‍💻 Author
+✅ SQL injection prevention
 
-**Muhammad Atif Khan**
+✅ Input validation (Pydantic)
 
-- GitHub: [@Muhammad-AtifKhan](https://github.com/Muhammad-AtifKhan)
+✅ CORS protection
 
-## 📝 License
+✅ Rate limiting
 
+📈 Future Enhancements
+Mobile app (React Native)
+
+Real-time WebSocket notifications
+
+AI-based complaint categorization
+
+Docker containerization
+
+CI/CD pipeline (GitHub Actions)
+
+Analytics dashboard with charts
+
+👨‍💻 Author
+Muhammad Atif Khan
+
+GitHub: @Muhammad-AtifKhan
+
+📝 License
 MIT License - feel free to use for learning and production!
 
----
-
-## ⭐ Show Your Support
-
+⭐ Show Your Support
 If you found this project helpful, please give it a star!
 
----
-
-**Built with ❤️ by Muhammad Atif Khan**
-```
+Built with ❤️ by Muhammad Atif Khan
